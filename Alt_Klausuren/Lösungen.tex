@@ -8,9 +8,22 @@
 \section{Theo I}
 \subsection{Theo-Ka 17/18}
 	
-	
+\subsubsection{Aufgabe 2}
+	Wir betrachten x = a$^{4{^n}}$ = uvw. Wobei |uv| $\le$ n, |v| $\ge$ 1. \\
+	Sei i = 2:\\
+	uvw < uv$^{2}$w = a$^{4^{n}+k}$ <  a$^{4^{(n+1)}}$. \\
+	Da 4$^{n}$ streng monoton wachsend ist uv$^{2}$w $\notin$ L $\Rightarrow$ L nicht regulär \\
+	\qed
+\subsubsection{Aufgabe 4}
+	\begin{enumerate}
+		\item abaa
+		\item aaabb
+		\item \(\{aaaaa^{n}b^{n}|n\in \mathbb{N}\}\)
+		\item unendlich viele 
+	\end{enumerate}
 \subsubsection{Aufgabe 6}
 	\begin{enumerate}
+	
 		\item Die Sprache ist regulär, da \(L_1 = \{w | w \in a^{+} \lor w \in b^{+} \} \)
 		\item Die Sprache ist regulär, da \( L_2 = \{c^{*} \} \)
 		\item Die Sprache ist det kontextfrei da der kellerautomat nicht raten muss 
@@ -37,8 +50,22 @@
 \subsubsection{Aufgabe 9}
 	\begin{enumerate}
 		\item Ja, Nein, Nein, Nein
-		\item 3
+		\item 2
 		\item Ja, Nein, Nein, Nein
-		\item S $\Rightarrow$ aAB $\Rightarrow$ aaBBB$\Rightarrow^{*}$ aaaaa ist die kürzeste Ableitung \{aaaaa, abaaaaaa\}
+		\item S $\Rightarrow$ aAB $\Rightarrow$ aaBBB$\Rightarrow^{*}$ aaaaa ist die kürzeste. Jede Ableitung fügt ein b hinzu. Somit gibt es 5 Ableitunge kürzer als 11
+	\item Nein, Nein, Ja, Nein
+	\item
 	\end{enumerate}
+\subsubsection{Aufgabe 10}
+	\begin{enumerate}
+		\item Diese ist regulär. Betrachte die reguläre Grammatik G = \{ S $\rightarrow$ bS|aS', S' $\rightarrow$ bS'|aS''| a, S''$\rightarrow$ aS''| bS''| a | b\}
+		\item Ist kontextfrei, da sie der Gramamtik a$^{n}$ b$^{n}$
+	\end{enumerate}
+	
+\subsubsection{Aufgabe 11}
+\begin{enumerate}
+	\item Nein, denn abbaa $\notin$ L, aber a$\varepsilon$a $\in$ L. Nein da Synt verfeinerung von Myhill-Neurode
+	\item Klassen $varepsilon$, a, b, bba // gibt es mehr?
+	\item 
+\end{enumerate}
 \end{document}
