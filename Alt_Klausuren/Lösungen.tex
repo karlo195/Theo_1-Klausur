@@ -1,0 +1,44 @@
+
+\documentclass[12pt]{scrartcl}
+
+\input{../styles/Packages.tex}
+
+\begin{document}
+	
+\section{Theo I}
+\subsection{Theo-Ka 17/18}
+	
+	
+\subsubsection{Aufgabe 6}
+	\begin{enumerate}
+		\item Die Sprache ist regulär, da \(L_1 = \{w | w \in a^{+} \lor w \in b^{+} \} \)
+		\item Die Sprache ist regulär, da \( L_2 = \{c^{*} \} \)
+		\item Die Sprache ist det kontextfrei da der kellerautomat nicht raten muss 
+		\item Die Sprache ist Typ 1 da sie \( a^{n} b^{n} c^{n} \) ähnelt
+		\item Die Sprache ist Typ 2, da sie \(a^{n} b^{n} \) ähnelt jedoch muss sie raten, ob sie die gleichheit von a's und  bs's oder die Gleichheit von a's und c's überprüfen muss
+		\item Die Sprache ist Typ 1, da ein endlicher nicht- deterministische Automat diese erkennen kann (wie ww)
+		\item Diese ist det. kontextfrei (vgl a$^{n}$b$^{n}$)
+		\item Diese ist Typ 2, da Typ 2 (a$^{n}$b$^{n}$ a$^{m}$b$^{m}$)) erkennen kann, aber raten muss wo b$^{m}$ anfängt
+		\item Diese ist Typ 1 da unär und nicht Typ 3
+		\item Diese ist Typ 3
+	\end{enumerate}
+
+\subsubsection{Aufgabe 7}
+	\begin{enumerate}
+		\item G = \(\{S \rightarrow S'abba | ,\ S' \rightarrow S'AS'BS'| S'BS'AS'|\varepsilon \}\)
+	\end{enumerate}
+
+\subsubsection{Aufgabe 8}
+	\begin{enumerate}
+		\item falsch, wahr, wahr, \(L_3=\{ b^{m+2} a^{n+1}| m,n \in \mathbb{N}_0 \}  \)
+		\item Sei das Alphabet $\Sigma$ = \(\{a_1, a_2, ..., a_n  \}\) n $\in$ $\mathbb{N}\ge 1$. Wir ersetzen jedes Terminal a$_n$ in der Grammatik G mit einer Variable A$_n$ und Vereinigen diese mit\(\{ (a_k,A_k A_k),(A_k,a_k)| 0 < k < n \}\). Die resultierende ist G'.
+	\end{enumerate}
+	
+\subsubsection{Aufgabe 9}
+	\begin{enumerate}
+		\item Ja, Nein, Nein, Nein
+		\item 3
+		\item Ja, Nein, Nein, Nein
+		\item S $\Rightarrow$ aAB $\Rightarrow$ aaBBB$\Rightarrow^{*}$ aaaaa ist die kürzeste Ableitung \{aaaaa, abaaaaaa\}
+	\end{enumerate}
+\end{document}
