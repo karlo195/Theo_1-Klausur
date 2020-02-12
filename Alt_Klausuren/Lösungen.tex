@@ -47,9 +47,56 @@
 
 \subsubsection{Aufgabe 4}
 	\begin{enumerate}
-		\item Falsch - zB \(\{  \}\)
-		\item 
+		\item Falsch - zB \(\{a^{n}b^{n}|n \in \mathbb{N}\} \cap \{b^{n}c^{n}|n,k \in \mathbb{N}\} = \{ \}\)
+		\item Falsch. Gegenbeispiel Wähle L = \(\{ a^{n}b^{n} | n \ge 0 \}\) und den homomorphismus f(a) = a, f(b) = $\varepsilon$ dann ist f(L) = a$^{*}$. Somit ist L nicht regulär aber das Bild unter dem homomorphismus. 
+		\item Wahr.Typ 2 Sprachen unter Vereinigung abgeschlossen. Beweis mit Induktion. (Vereinige 0 mal) und dann n+1 mal. // Fragwürdig, stimmt dies? 
 	\end{enumerate}
+	
+\subsubsection{Aufgabe 5}
+	\begin{enumerate}	
+		\item \(\{S \Rightarrow aS|aS',\ S' \Rightarrow bS'c|bc \}\)
+		\item //
+		\item Wir nehmen an L wäre regulär. Reguläre Sprachen sind unter homomorphismen abgeschlossen. Wir wählen f(a) = $\varepsilon$, f(b) = b, f(c) = c. f(L) = \(\{b^{n}c^{n} | n \ge 1\}\)\\ 
+		Pumping Lemma sei x $\in$ L, x = uvw, wobei |x| $\ge$ n, |uv| $\le$ n, |v| $\ge$ 1. Sei x = \(b^{n}c^{n}\). \\
+		Daraus ergibt sich, dass v = b$^{k}$. k > 1. \\
+		Wähle i = 2: \(|uv^{2}w|_b = n + k > n = |uv^{2}w|_c \Rightarrow uv^{2}w \notin L \Rightarrow f(L) \) nicht regulär $\Rightarrow$ L nicht regulär .
+		\item DEA = NEA $\subset$ DPDA $\subset$ PDA $\subset$ LBA $\subset$ DTM = TM
+		\end{enumerate} 
+
+\subsubsection{Aufgabe 6}
+	\begin{enumerate}	
+		\item Ist in Chomsky- und Kuroda-Normalform und vom Typ 0, 1 , 2 
+		\item 
+			\begin{table}[!h]	
+			\centering
+ 			 \begin{tabular}{|c|c|c|c|}
+ 			 	 \cline{1-4}
+     			 A,C & A,C & B & B \\ \cline{1-4}
+     			 C & E &   \\ \cline{1-3}
+     			  & B\\ \cline{1-2}
+     			 E\\ \cline{1-1}
+			\end{tabular}	
+			\end{table} 
+			Das Wort ist nicht in der Sprache. Da es nicht abgeleitet werden kann, ausgehend von dem Terminalzeichen S 
+		\item Diese ist mehrdeutig, da es mehrere Ableitungsbäume gibt. S -> CD -> CBA -> aba \\
+		S -> EC -> ABC -> aba
+		\item 
+	
+\subsubsection{Aufgabe 7}
+	\begin{enumerate}
+			\item \{$\varepsilon$\}
+			\item \{aab, aba, baa\}
+			\item \{cba, cab, acb, abc, bac, bca\}
+		\end{enumerate}
+		\item Nein. Zum Beispiel L=a$^{*}$ = s(L)
+	\end{enumerate}
+	
+\subsubsection{Aufgabe 8}
+	\begin{enumerate}
+			\item (aBbaa)-(abAaa)-(abaBa)-(abaBa)
+	\end{enumerate}
+\subsection{Theo-Ka 17/18}
+	
 \subsection{Theo-Ka 17/18}
 	
 \subsubsection{Aufgabe 2}
@@ -68,6 +115,7 @@
 		(1)\( [ab^{1}c] \neq [ab^{1+k}c]\), da \(ab^{1}c \in L\) aber \(ab^{1+k}c \notin L\) \\
 		\( [ab^{b^n}c] \neq [ab^{b^n+k}c]\), da\( ab^{b^n}cc^{n-1} \in L\) aber \( ab^{b^n+k}cc^{n-1} \notin L\). Somit ist jede Äquivalenzklasse Inäquivalent zueinander 
 	\end{enumerate}
+	
 \subsubsection{Aufgabe 4}
 	\begin{enumerate}
 		\item abaa
@@ -75,6 +123,7 @@
 		\item \(\{aaaa^{n}b^{n}|n\in \mathbb{N}\}\)
 		\item unendlich viele 
 	\end{enumerate}
+	
 \subsubsection{Aufgabe 6}
 	\begin{enumerate}
 	
