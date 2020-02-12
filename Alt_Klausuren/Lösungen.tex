@@ -33,14 +33,16 @@
 			\item \(\{ b^{*}a^{*}\}\)
 			\item \( \Sigma^{*}\)
 		\end{enumerate}
-		\item Angenomen wir haben einen deterministischen endlichen Automaten. Seien Z die Menge der Zustände und E die Menge der Endzustände. Falls \( q \in Z \land \delta(q,a) \in E  \). Soll q auch als Endzustand markiert werden. Dies wird nun so oft wiederholt, bis keine neuen Endzustände hinzugefügt werden.\\
-		Sei w = va$^{n}$ und w $\in$ L.  Dann soll gezeigt werden, dass v \(\in multipop_a(L)\)  \\ 
+		\item Angenomen wir haben einen deterministischen endlichen Automaten der L erkennt. Seien Z die Menge der Zustände und E die Menge der Endzustände. Falls \( q \in Z \land \delta(q,a) \in E  \). Soll q auch als Endzustand markiert werden. Dies wird nun so oft wiederholt, bis keine neuen Endzustände hinzugefügt werden.\\
+		Sei w = va$^{n}$ und w $\in$ L.  Dann soll gezeigt werden, dass v akzeptiert wird.  \\ 
 		
-		Induktionsanfang: w = v, dann nach Annahme v $\in$ L.\\
-		Es gilt: w = va$^{n-1}$ v \(\in multipop_a(L)\). Es ist zu zeigen w=v'a$^{n}$ v \(\in multipop_a(L)\). \\ 
-		Es ist 
+		Induktionsanfang: w = v = va$^{0}$, dann erkennt der oben konstruierte Automat v, da v = w $\in$ L und der konstruierte Automat offensichtlich alle Elemente in L erkennt().\\ 
 		
+		Es gilt: w = va$^{n-1}$, v \(\in multipop_a(L)\). Es ist zu zeigen w = v'a$^{n}$, v'\(\in multipop_a(L)\). \\ 
+		Aus w = va$^{n-1}$ = va$^{n}$ ergibt sich v = v'a. \\ Der konstruierte Automat der v akzeptiert muss einen Übergang \( \delta(q, v) \in E \) besitzen. \(\delta(q, v) \in E =\delta(q, v'a) \in E = \delta(\delta(q,v), a) \in E \Rightarrow \delta(q,v) \in E\) (aus Konstruktion).\\
 		
+		Zu zeigen ist noch, dass keine anderen Wörter erkannt werden als in Multipop enthalten sind.
+		\qed	
 	\end{enumerate}
 
 \subsubsection{Aufgabe 4}
@@ -56,6 +58,16 @@
 	uvw < uv$^{2}$w = a$^{4^{n}+k}$ <  a$^{4^{(n+1)}}$. \\
 	Da 4$^{n}$ streng monoton wachsend ist uv$^{2}$w $\notin$ L $\Rightarrow$ L nicht regulär \\
 	\qed
+
+\subsubsection{Aufgabe 4}
+	\begin{enumerate}
+		\item \(G = \{ S \Rightarrow aS| aS',\ S' \Rightarrow bS'c|bc\}\)
+		\item
+		\item L ist nicht regulär. Dies ist mit Hilfe der paarweisen in Äquivalenz zu zeigen.\\
+		Wir betrachten die Äquivalenzklassen der Sprache L \(\{ [ab^{b^n+1}c]| n \ge 1 \}\). Zu zeigen ist die paarweise Inäquivalenz dieser. Sei k > 0\\
+		(1)\( [ab^{1}c] \neq [ab^{1+k}c]\), da \(ab^{1}c \in L\) aber \(ab^{1+k}c \notin L\) \\
+		\( [ab^{b^n}c] \neq [ab^{b^n+k}c]\), da\( ab^{b^n}cc^{n-1} \in L\) aber \( ab^{b^n+k}cc^{n-1} \notin L\). Somit ist jede Äquivalenzklasse Inäquivalent zueinander 
+	\end{enumerate}
 \subsubsection{Aufgabe 4}
 	\begin{enumerate}
 		\item abaa
