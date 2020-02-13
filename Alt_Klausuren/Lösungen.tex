@@ -3,6 +3,9 @@
 
 \input{../styles/Packages.tex}
 
+\newcommand\circlearound[1]{%
+  				\tikz[baseline]\node[draw,shape=circle,anchor=base] {#1} ;}
+  
 \begin{document}
 	
 \section{Theo I}
@@ -96,7 +99,7 @@
 			\item (aBbaa)-(abAaa)-(abaBa)-(abCaa)-(aCaaa)-(Caaaa)-(C\_aaaa)-(Aaaaa) \\
 			Die Turing maschine bleibt nicht stehen. Das heißt das Wort wird nicht erkannt.
 			\item (ab)$^{*}$
-			\item
+			\item M' = \{Q, $\Sigma$, $\Sigma \cup \{_\}$, M' \}
 	\end{enumerate}
 	
 \subsection{Theo-Ka 17/18}
@@ -178,5 +181,59 @@
 	\subsubsection{Aufgabe 1}
 	\begin{enumerate}
 		\item \( (a|b)^{*}  \)
+	\end{enumerate}
+	
+\section{Theo I}
+
+\subsection{Theo-Ka 16/17}
+
+\subsubsection{Aufgabe 1}
+	\begin{enumerate}
+		\item bbb ist ein synchronisierendes Wort
+		\item 
+	\end{enumerate}
+	
+\subsubsection{Aufgabe 2}
+	Der minimale Automat hat 8 Zustände (siehe Hausaufgaben)
+
+\subsubsection{Aufgabe 3}
+	\begin{enumerate}
+		\item Die betrachtete Sprache ist unär. Somit ist nur zu zeigen, dass sie nicht Typ 3 ist, um zu zeigen dass sie nicht Typ 2 ist.\\
+			Angenommen L$_1$ ist regulär. Dann ist L$_1$ unter komplement abgeschlossen. Somit betrachten wir x = uvw = a$^{n}$ n $\in\mathbb{P}$, v = a$^{k}$ k > 0.\\
+		\(|uv^{n + 1}w| = |uvw| + n*k = n*(k+1) \notin \bar L_1 \Rightarrow \) $\bar L_1$ nicht regulär \\
+		$\Rightarrow L_1$ nicht regulär $\Rightarrow$ L$_1$ nicht kontextfrei
+				
+		\item  Angenommen L$_2$ wäre Typ 2. Typ 2 Sprachen sind abgeschlossen unter Schnitt mit Typ 3. Wir schneiden mit der Sprache a$^{*}$. Dann erhalten wir L$_1$. Jedoch ist bewiesen, das diese nicht Typ 2 ist $\Rightarrow$ L$_2$ nicht Typ 2
+	\end{enumerate}
+
+\subsubsection{Aufgabe 4}
+	\begin{enumerate}
+	\item 
+	\begin{table}[!h]	
+	\centering
+ 	 \begin{tabular}{c|c|c|c|c|c|c|c}	 
+       & \circlearound{q\textsubscript{0}}  & \circlearound{q\textsubscript{1}} & \circlearound{q\textsubscript{2}} & \circlearound{q\textsubscript{3}} & \circlearound{q\textsubscript{4}} & \circlearound{q\textsubscript{5}} \\  \hline 	
+       
+    \circlearound{q\textsubscript{6}} & baa & ab & ba & a & a & $\varepsilon$ \\ \cline{1-7}
+    \circlearound{q\textsubscript{5}} & $\varepsilon$ & $\varepsilon$ & $\varepsilon$ & $\varepsilon$ & $\varepsilon$ \\ \cline{1-6}
+    \circlearound{q\textsubscript{4}} & baa & ba & ba & X \\ \cline{1-5}
+    \circlearound{q\textsubscript{3}} & baa & ba & ba \\ \cline{1-4}
+    \circlearound{q\textsubscript{2}} & bba & X \\ \cline{1-3}
+    \circlearound{q\textsubscript{1}} & bba \\ \cline{1-2}
+
+	\end{tabular}	
+	\end{table}
+	\end{enumerate}
+	Nach der Tabelle verschmelzen q3 q4 und q2 q1.  
+\subsubsection{Aufgabe 5}
+	\begin{enumerate}
+		\item regulär (abgeschlossenheit unter Konkatenation)
+		\item regulär (Abgeschlossen unter allen Operationen)
+		\item Typ 2 (da Beispiel Sprache)
+		\item Typ 1 (da ein Kellerautomat nur ein Keller besitzt)
+		\item Typ 1 (Schnitt mit reg. Sprache  b$^*$ ergibt unäre nicht Typ 2 Sprache)
+		\item Typ reg Typ 2
+		\item reg Typ 2
+		\item Typ 2
 	\end{enumerate}
 \end{document}
