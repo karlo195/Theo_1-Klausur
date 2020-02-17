@@ -99,7 +99,10 @@
 			\item (aBbaa)-(abAaa)-(abaBa)-(abCaa)-(aCaaa)-(Caaaa)-(C\_aaaa)-(Aaaaa) \\
 			Die Turing maschine bleibt nicht stehen. Das heißt das Wort wird nicht erkannt.
 			\item (ab)$^{*}$
-			\item M' = \{Q, $\Sigma$, $\Sigma \cup \{_\}$, M' \}
+			\item M' = \{Q, $\Sigma$, $\Sigma \cup \{ \sqcup \}$, $\delta$', s, $\sqcup$, F \} \\
+			\(\delta': Q \times (\Sigma \cup \{\sqcup\}) \rightarrow Z \times (\Sigma \cup \{\sqcup\}) \times 
+			\{R, N \}\) \\
+			$\forall q \in Q:$ \(\delta'(q, \sqcup) \rightarrow (q, \sqcup,N)\)
 	\end{enumerate}
 	
 \subsection{Theo-Ka 17/18}
