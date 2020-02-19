@@ -97,12 +97,14 @@
 \subsubsection{Aufgabe 8}
 	\begin{enumerate}
 			\item (aBbaa)-(abAaa)-(abaBa)-(abCaa)-(aCaaa)-(Caaaa)-(C\_aaaa)-(Aaaaa) \\
-			Die Turing maschine bleibt nicht stehen. Das heißt das Wort wird nicht erkannt.
+			Die Turing Maschine bleibt nicht stehen. Das heißt das Wort wird nicht erkannt.
 			\item (ab)$^{*}$
-			\item M' = \{Q, $\Sigma$, $\Sigma \cup \{ \sqcup \}$, $\delta$', s, $\sqcup$, F \} \\
-			\(\delta': Q \times (\Sigma \cup \{\sqcup\}) \rightarrow Z \times (\Sigma \cup \{\sqcup\}) \times 
-			\{R, N \}\) \\
-			$\forall q \in Q:$ \(\delta'(q, \sqcup) \rightarrow (q, \sqcup,N)\)
+			\item Vorsicht: Turing Maschinen halten, sobald sie in einen Endzustand gelangen! \\
+			Sei Q = \(\{q_0, q_1, ..., q_i\}\) sei Q' =\(\{ q'_n | \forall q_i:\in Q:\ n = i \}\)
+			
+			M' = \{Q $\cup$ Q', $\Sigma$, $\Sigma \cup \{ \sqcup \}$, $\delta$', s, $\sqcup$, F \} \\
+			\(\delta':  (q'_i, a) \rightarrow (\delta(q'_i, a),a, R) \) wobei q'$_i$ $\in$ Q', a $\in \Sigma$  \\
+			$\forall q'_i \in Q:$ \(\delta'(q'_i, \sqcup) \rightarrow (q_i, \sqcup,N)\)
 	\end{enumerate}
 	
 \subsection{Theo-Ka 17/18}
